@@ -1,0 +1,12 @@
+.band {
+  position: relative;
+  height: clamp(14rem, 38vw, 30rem);
+  margin: 0;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  /* Mostra mais da sala (poltronas e madeira) e menos do teto */
+  object-position: center 65%;
+}

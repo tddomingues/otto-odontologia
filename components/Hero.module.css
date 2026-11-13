@@ -2,6 +2,12 @@
   padding-block: var(--space-12) var(--section-space);
 }
 
+.grid {
+  display: grid;
+  gap: var(--space-12);
+  align-items: center;
+}
+
 .content {
   display: grid;
   gap: var(--space-6);
@@ -61,8 +67,54 @@
   background: var(--color-accent);
 }
 
+/* ===== Imagem em arco: a curva do "o" de otto ===== */
+.media {
+  position: relative;
+  width: 100%;
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+/* Círculo coral claro atrás do arco: só decoração */
+.media::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5rem;
+  left: -1.5rem;
+  width: 45%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--color-accent-soft);
+}
+
+.arch {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  /* Topo em semicírculo: 50% na horizontal e 40% na vertical
+     (metade da largura numa caixa 4:5) */
+  border-radius: 50% 50% var(--radius) var(--radius) / 40% 40% var(--radius)
+    var(--radius);
+  background: var(--color-line);
+}
+
+.image {
+  object-fit: cover;
+}
+
 @media (min-width: 40rem) {
   .actions > * {
     flex: 0 0 auto;
+  }
+}
+
+@media (min-width: 64rem) {
+  .grid {
+    grid-template-columns: 7fr 5fr;
+    gap: var(--space-16);
+  }
+
+  .media {
+    margin: 0;
   }
 }

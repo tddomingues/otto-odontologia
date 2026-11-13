@@ -1,3 +1,5 @@
+import Image from "next/image";
+import aboutImage from "@/assets/images/sobre-escovas.jpg";
 import styles from "./About.module.css";
 
 type Principle = {
@@ -31,6 +33,14 @@ export default function About() {
           <h2 id="sobre-titulo">
             Uma clínica pensada para quem adiou o dentista.
           </h2>
+
+          <Image
+            src={aboutImage}
+            alt="Escovas de dente de bambu em um pote de vidro, ao lado de folhas de eucalipto"
+            sizes="(min-width: 56rem) 26rem, 90vw"
+            placeholder="blur"
+            className={styles.image}
+          />
         </div>
 
         <div>

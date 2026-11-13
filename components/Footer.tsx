@@ -37,12 +37,25 @@ export default function Footer() {
           <p>
             <Link href="/privacidade">Política de privacidade (demonstrativa)</Link>
           </p>
-          <p>
-            <small>
-              Fontes: Fraunces e Source Sans 3 (SIL Open Font License). Créditos
-              de imagens: serão adicionados na Etapa 4.
-            </small>
-          </p>
+          <div className={styles.credits}>
+            <p>
+              <small>
+                Fotos (Unsplash):{" "}
+                <a href="https://unsplash.com/photos/44jaETSVX2I">
+                  Katarzyna Zygnerska
+                </a>
+                ,{" "}
+                <a href="https://unsplash.com/photos/VCC5Vc0X2F8">
+                  Harold Hisona
+                </a>{" "}
+                e{" "}
+                <a href="https://unsplash.com/photos/ZgBJHk1SI74">Jose Losada</a>
+                . Ilustrações: Notionists, de Zoish, via DiceBear (CC0). Mapa ©
+                colaboradores do OpenStreetMap. Fontes: Fraunces e Source Sans 3
+                (SIL Open Font License).
+              </small>
+            </p>
+          </div>
           <p>
             <small>Projeto de portfólio desenvolvido por tgdomingues.</small>
           </p>

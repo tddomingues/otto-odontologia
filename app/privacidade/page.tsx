@@ -32,8 +32,17 @@ export default function PrivacyPage() {
         <h2>Cookies e rastreamento</h2>
         <p>
           Não usamos cookies de rastreamento, ferramentas de análise de
-          audiência nem anúncios. As fontes são servidas pelo próprio site, sem
-          carregar arquivos de terceiros.
+          audiência nem anúncios. As fontes, as fotos e as ilustrações são
+          servidas pelo próprio site, sem carregar arquivos de terceiros.
+        </p>
+
+        <h2>Mapa</h2>
+        <p>
+          O mapa da seção de localização só é carregado se você clicar em
+          &ldquo;Ver mapa de Maringá&rdquo;. A partir desse clique, seu
+          navegador se conecta aos servidores do OpenStreetMap, que recebem
+          dados técnicos como o endereço IP, conforme a política de privacidade
+          da OpenStreetMap Foundation. Sem o clique, nenhuma conexão é feita.
         </p>
 
         <h2>Hospedagem</h2>

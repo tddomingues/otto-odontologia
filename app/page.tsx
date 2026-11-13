@@ -5,6 +5,7 @@ import About from "@/components/About";
 import Services from "@/components/Services";
 import HowItWorks from "@/components/HowItWorks";
 import Highlights from "@/components/Highlights";
+import AmbientBand from "@/components/AmbientBand";
 import Testimonials from "@/components/Testimonials";
 import Team from "@/components/Team";
 import Location from "@/components/Location";
@@ -23,6 +24,7 @@ export default function Home() {
         <Services />
         <HowItWorks />
         <Highlights />
+        <AmbientBand />
         <Testimonials />
         <Team />
         <Location />

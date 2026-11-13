@@ -1,9 +1,11 @@
+import Image from "next/image";
+import heroImage from "@/assets/images/hero-consultorio.jpg";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
   return (
     <section id="inicio" className={styles.hero} aria-labelledby="hero-titulo">
-      <div className="container">
+      <div className={`container ${styles.grid}`}>
         <div className={styles.content}>
           <p className={styles.eyebrow}>Odontologia em Maringá · PR</p>
 
@@ -29,8 +31,21 @@ export default function Hero() {
           </div>
 
           <p className={styles.note}>Atendimento de segunda a sábado</p>
+        </div>
 
-          {/* Imagem de destaque: entra no passo de imagens desta etapa */}
+        <div className={styles.media}>
+          <div className={styles.arch}>
+            <Image
+              src={heroImage}
+              alt="Consultório odontológico claro, com cadeira branca junto a uma janela"
+              fill
+              sizes="(min-width: 64rem) 28rem, 90vw"
+              placeholder="blur"
+              loading="eager"
+              fetchPriority="high"
+              className={styles.image}
+            />
+          </div>
         </div>
       </div>
     </section>

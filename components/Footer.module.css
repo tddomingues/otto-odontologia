@@ -74,6 +74,10 @@
   font-size: inherit;
 }
 
+.credits {
+  max-width: 40rem;
+}
+
 @media (min-width: 56rem) {
   .grid {
     grid-template-columns: 1fr auto 1.5fr;

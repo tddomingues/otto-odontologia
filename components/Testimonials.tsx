@@ -1,10 +1,5 @@
+import TestimonialCarousel, { type Testimonial } from "./TestimonialCarousel";
 import styles from "./Testimonials.module.css";
-
-type Testimonial = {
-  quote: string;
-  author: string;
-  authorNote: string;
-};
 
 const testimonials: Testimonial[] = [
   {
@@ -12,18 +7,42 @@ const testimonials: Testimonial[] = [
       "Eu estava havia anos sem ir ao dentista e tinha vergonha disso. Ninguém me julgou, e saí entendendo cada etapa.",
     author: "Mariana C.",
     authorNote: "personagem fictícia",
+    avatar: "/avatars/mariana.svg",
   },
   {
     quote:
       "Gostei de receber o orçamento por escrito e de poder pensar com calma antes de decidir.",
     author: "Rafael T.",
     authorNote: "personagem fictício",
+    avatar: "/avatars/rafael.svg",
   },
   {
     quote:
       "Levo minha mãe, que tem medo de dentista. A equipe explica tudo com muita paciência.",
     author: "Juliana M.",
     authorNote: "personagem fictícia",
+    avatar: "/avatars/juliana.svg",
+  },
+  {
+    quote:
+      "Faço a manutenção do aparelho aqui. Os horários no fim do dia encaixam bem na minha rotina.",
+    author: "Paulo R.",
+    authorNote: "personagem fictício",
+    avatar: "/avatars/paulo.svg",
+  },
+  {
+    quote:
+      "A recepção é tranquila e fui atendida no horário marcado. Parece um detalhe, mas faz diferença.",
+    author: "Camila S.",
+    authorNote: "personagem fictícia",
+    avatar: "/avatars/camila.svg",
+  },
+  {
+    quote:
+      "Sempre fiquei ansiosa no dentista. Aqui me explicaram cada passo antes de começar, e isso me deixou mais à vontade.",
+    author: "Sônia L.",
+    authorNote: "personagem fictícia",
+    avatar: "/avatars/sonia.svg",
   },
 ];
 
@@ -38,8 +57,8 @@ export default function Testimonials() {
           <h2 id="depoimentos-titulo">O que dizem nossos pacientes</h2>
 
           <p className={styles.intro}>
-            Cenário conceitual: os depoimentos e a nota abaixo são fictícios,
-            criados para este projeto de portfólio.
+            Cenário conceitual: os depoimentos, as ilustrações e a nota abaixo
+            são fictícios, criados para este projeto de portfólio.
           </p>
 
           <p className={styles.rating}>
@@ -53,24 +72,7 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <ul className={styles.list}>
-          {testimonials.map((testimonial) => (
-            <li key={testimonial.author}>
-              <figure className={styles.card}>
-                <p className={styles.badge}>
-                  Depoimento fictício · exemplo de portfólio
-                </p>
-                <blockquote className={styles.quote}>
-                  <p>{testimonial.quote}</p>
-                </blockquote>
-                <figcaption className={styles.caption}>
-                  <span className={styles.author}>{testimonial.author}</span>,{" "}
-                  {testimonial.authorNote}
-                </figcaption>
-              </figure>
-            </li>
-          ))}
-        </ul>
+        <TestimonialCarousel testimonials={testimonials} />
       </div>
     </section>
   );
