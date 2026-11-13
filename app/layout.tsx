@@ -1,5 +1,17 @@
 import type { Metadata } from "next";
+import { Fraunces, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  axes: ["opsz", "SOFT"],
+  variable: "--font-fraunces",
+});
+
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  variable: "--font-source-sans",
+});
 
 export const metadata: Metadata = {
   title: "Otto Odontologia | Clínica fictícia em Maringá · Projeto de portfólio",
@@ -9,7 +21,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="pt-BR">
+    <html
+      lang="pt-BR"
+      className={`${fraunces.variable} ${sourceSans.variable}`}
+    >
       <body>{children}</body>
     </html>
   );
