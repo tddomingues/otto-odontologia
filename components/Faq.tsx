@@ -1,3 +1,5 @@
+import styles from "./Faq.module.css";
+
 type FaqItem = {
   question: string;
   answer: string;
@@ -32,16 +34,18 @@ const faqItems: FaqItem[] = [
 
 export default function Faq() {
   return (
-    <section id="duvidas" aria-labelledby="duvidas-titulo">
-      <h2 id="duvidas-titulo">Perguntas frequentes</h2>
+    <section id="duvidas" className="section" aria-labelledby="duvidas-titulo">
+      <div className={`container ${styles.grid}`}>
+        <h2 id="duvidas-titulo">Perguntas frequentes</h2>
 
-      <div>
-        {faqItems.map((item) => (
-          <details key={item.question}>
-            <summary>{item.question}</summary>
-            <p>{item.answer}</p>
-          </details>
-        ))}
+        <div className={styles.list}>
+          {faqItems.map((item) => (
+            <details key={item.question} className={styles.item}>
+              <summary className={styles.question}>{item.question}</summary>
+              <p className={styles.answer}>{item.answer}</p>
+            </details>
+          ))}
+        </div>
       </div>
     </section>
   );

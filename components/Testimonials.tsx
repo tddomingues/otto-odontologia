@@ -1,3 +1,5 @@
+import styles from "./Testimonials.module.css";
+
 type Testimonial = {
   quote: string;
   author: string;
@@ -27,33 +29,49 @@ const testimonials: Testimonial[] = [
 
 export default function Testimonials() {
   return (
-    <section aria-labelledby="depoimentos-titulo">
-      <h2 id="depoimentos-titulo">O que dizem nossos pacientes</h2>
+    <section
+      className={`section ${styles.testimonials}`}
+      aria-labelledby="depoimentos-titulo"
+    >
+      <div className="container">
+        <div className={styles.header}>
+          <h2 id="depoimentos-titulo">O que dizem nossos pacientes</h2>
 
-      <p>
-        Cenário conceitual: os depoimentos e a nota abaixo são fictícios,
-        criados para este projeto de portfólio.
-      </p>
+          <p className={styles.intro}>
+            Cenário conceitual: os depoimentos e a nota abaixo são fictícios,
+            criados para este projeto de portfólio.
+          </p>
 
-      <p>
-        <strong>4,9 de 5</strong> · nota média fictícia
-      </p>
+          <p className={styles.rating}>
+            <strong className={styles.score}>4,9</strong>
+            <span className={styles.stars} aria-hidden="true">
+              ★★★★★
+            </span>
+            <span className={styles.ratingLabel}>
+              de 5 · nota média fictícia
+            </span>
+          </p>
+        </div>
 
-      <ul>
-        {testimonials.map((testimonial) => (
-          <li key={testimonial.author}>
-            <figure>
-              <p>Depoimento fictício · exemplo de portfólio</p>
-              <blockquote>
-                <p>{testimonial.quote}</p>
-              </blockquote>
-              <figcaption>
-                {testimonial.author}, {testimonial.authorNote}
-              </figcaption>
-            </figure>
-          </li>
-        ))}
-      </ul>
+        <ul className={styles.list}>
+          {testimonials.map((testimonial) => (
+            <li key={testimonial.author}>
+              <figure className={styles.card}>
+                <p className={styles.badge}>
+                  Depoimento fictício · exemplo de portfólio
+                </p>
+                <blockquote className={styles.quote}>
+                  <p>{testimonial.quote}</p>
+                </blockquote>
+                <figcaption className={styles.caption}>
+                  <span className={styles.author}>{testimonial.author}</span>,{" "}
+                  {testimonial.authorNote}
+                </figcaption>
+              </figure>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }

@@ -1,0 +1,12 @@
+# Padroniza a quebra de linha como LF (padrão de projetos web),
+# independentemente do sistema operacional de quem edita.
+* text=auto eol=lf
+
+# Arquivos binários: nunca converter
+*.ico binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.avif binary
+*.woff2 binary

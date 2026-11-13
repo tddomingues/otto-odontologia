@@ -1,0 +1,142 @@
+.contact {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+/* Sobre petróleo, o foco fica coral... */
+.contact :focus-visible {
+  outline-color: var(--color-accent);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+.intro {
+  display: grid;
+  gap: var(--space-6);
+  justify-items: start;
+}
+
+.title {
+  color: var(--color-bg);
+}
+
+.lead {
+  max-width: 32rem;
+  color: var(--color-on-dark-muted);
+  font-size: var(--text-lg);
+}
+
+/* ===== Formulário ===== */
+.form {
+  display: grid;
+  gap: var(--space-6);
+  padding: clamp(var(--space-6), 4vw, var(--space-12));
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-ink);
+}
+
+/* ...mas dentro do cartão claro, volta a ser petróleo */
+.form :focus-visible {
+  outline-color: var(--color-primary);
+}
+
+.notice {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  background: var(--color-accent-soft);
+  font-size: var(--text-sm);
+}
+
+.field {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.label {
+  font-weight: 600;
+}
+
+.input {
+  width: 100%;
+  min-height: 3rem;
+  padding: var(--space-3) var(--space-4);
+  border: 1.5px solid var(--color-muted);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font: inherit;
+}
+
+.input:hover {
+  border-color: var(--color-primary);
+}
+
+textarea.input {
+  resize: vertical;
+}
+
+.fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.legend {
+  margin-bottom: var(--space-2);
+  padding: 0;
+  font-weight: 600;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.option {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 2.75rem;
+  padding: var(--space-2) var(--space-4);
+  border: 1.5px solid var(--color-muted);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+}
+
+/* Opção marcada: muda a borda E o fundo (não só a cor), e o
+   próprio botão de rádio também mostra o estado */
+.option:has(input:checked) {
+  border-color: var(--color-primary);
+  background: var(--color-accent-soft);
+}
+
+.option input {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+
+.submit {
+  width: 100%;
+}
+
+@media (min-width: 40rem) {
+  .submit {
+    width: auto;
+    justify-self: start;
+  }
+}
+
+@media (min-width: 64rem) {
+  .grid {
+    grid-template-columns: 5fr 7fr;
+    gap: var(--space-16);
+  }
+}

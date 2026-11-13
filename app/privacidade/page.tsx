@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import DemoBanner from "@/components/DemoBanner";
+import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Política de privacidade (demonstrativa) | Otto Odontologia",
@@ -12,7 +13,7 @@ export default function PrivacyPage() {
   return (
     <>
       <DemoBanner />
-      <main>
+      <main className={`section container ${styles.page}`}>
         <h1>Política de privacidade (demonstrativa)</h1>
 
         <p>
@@ -50,7 +51,7 @@ export default function PrivacyPage() {
           retenção e canal para o titular exercer seus direitos.
         </p>
 
-        <p>
+        <p className={styles.back}>
           <Link href="/">Voltar para a página inicial</Link>
         </p>
       </main>

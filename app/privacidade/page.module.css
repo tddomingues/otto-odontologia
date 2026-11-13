@@ -1,0 +1,21 @@
+.page {
+  max-width: 44rem;
+}
+
+.page h1 {
+  margin-bottom: var(--space-6);
+  font-size: var(--text-2xl);
+}
+
+.page h2 {
+  margin: var(--space-12) 0 var(--space-3);
+  font-size: var(--text-xl);
+}
+
+.page p + p {
+  margin-top: var(--space-4);
+}
+
+.back {
+  margin-top: var(--space-12);
+}

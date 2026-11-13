@@ -1,0 +1,58 @@
+.header {
+  display: grid;
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+}
+
+.note {
+  max-width: 40rem;
+  color: var(--color-muted);
+}
+
+.list {
+  display: grid;
+  gap: var(--space-8);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.member {
+  display: grid;
+  gap: var(--space-2);
+}
+
+/* Monograma no lugar de foto: deixa claro que são personagens */
+.avatar {
+  display: grid;
+  aspect-ratio: 4 / 3;
+  margin-bottom: var(--space-2);
+  place-items: center;
+  border-radius: var(--radius);
+  background: var(--color-primary);
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 2rem + 4vw, 4.5rem);
+  font-style: italic;
+  letter-spacing: -0.02em;
+}
+
+.member:nth-child(2) .avatar {
+  background: var(--color-accent-soft);
+  color: var(--color-primary);
+}
+
+.member:nth-child(3) .avatar {
+  background: var(--color-primary-dark);
+  color: var(--color-accent-soft);
+}
+
+.member p {
+  color: var(--color-muted);
+}
+
+@media (min-width: 48rem) {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

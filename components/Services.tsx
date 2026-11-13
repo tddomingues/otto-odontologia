@@ -1,3 +1,5 @@
+import styles from "./Services.module.css";
+
 type Service = {
   title: string;
   description: string;
@@ -38,24 +40,32 @@ const services: Service[] = [
 
 export default function Services() {
   return (
-    <section id="tratamentos" aria-labelledby="tratamentos-titulo">
-      <h2 id="tratamentos-titulo">O que fazemos</h2>
+    <section
+      id="tratamentos"
+      className={`section ${styles.services}`}
+      aria-labelledby="tratamentos-titulo"
+    >
+      <div className="container">
+        <h2 id="tratamentos-titulo" className={styles.title}>
+          O que fazemos
+        </h2>
 
-      <ul>
-        {services.map((service) => (
-          <li key={service.title}>
-            <h3>{service.title}</h3>
-            <p>{service.description}</p>
-          </li>
-        ))}
-      </ul>
+        <ul className={styles.list}>
+          {services.map((service) => (
+            <li key={service.title} className={styles.item}>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+            </li>
+          ))}
+        </ul>
 
-      <p>
-        <small>
-          As informações acima são gerais. A indicação de qualquer tratamento
-          depende de avaliação clínica individual.
-        </small>
-      </p>
+        <p className={styles.disclaimer}>
+          <small>
+            As informações acima são gerais. A indicação de qualquer tratamento
+            depende de avaliação clínica individual.
+          </small>
+        </p>
+      </div>
     </section>
   );
 }

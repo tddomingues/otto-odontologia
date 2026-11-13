@@ -1,3 +1,5 @@
+import styles from "./HowItWorks.module.css";
+
 type Step = {
   title: string;
   text: string;
@@ -24,17 +26,25 @@ const steps: Step[] = [
 
 export default function HowItWorks() {
   return (
-    <section id="como-funciona" aria-labelledby="como-funciona-titulo">
-      <h2 id="como-funciona-titulo">Sua primeira consulta, passo a passo</h2>
+    <section
+      id="como-funciona"
+      className={`section ${styles.how}`}
+      aria-labelledby="como-funciona-titulo"
+    >
+      <div className="container">
+        <h2 id="como-funciona-titulo" className={styles.title}>
+          Sua primeira consulta, passo a passo
+        </h2>
 
-      <ol>
-        {steps.map((step) => (
-          <li key={step.title}>
-            <h3>{step.title}</h3>
-            <p>{step.text}</p>
-          </li>
-        ))}
-      </ol>
+        <ol className={styles.steps}>
+          {steps.map((step) => (
+            <li key={step.title} className={styles.step}>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
     </section>
   );
 }

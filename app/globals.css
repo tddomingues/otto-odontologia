@@ -11,6 +11,7 @@
   --color-accent-soft: #f6ded8; /* coral claro: fundo de selos */
   --color-accent-strong: #9e4a3a; /* coral escuro: texto de destaque */
   --color-line: #e4dccf; /* linhas divisórias decorativas */
+  --color-on-dark-muted: #c5d8da; /* texto secundário sobre petróleo */
 
   /* Tipografia */
   --font-heading: var(--font-fraunces), Georgia, serif;
@@ -50,6 +51,7 @@
 html {
   color-scheme: light;
   scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -79,6 +81,15 @@ h3 {
   text-wrap: balance;
 }
 
+h2 {
+  font-size: var(--text-2xl);
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: var(--text-xl);
+}
+
 p {
   margin: 0;
   text-wrap: pretty;
@@ -102,4 +113,69 @@ img {
 
 ::selection {
   background: var(--color-accent-soft);
+}
+
+/* ===== Utilitários compartilhados ===== */
+.container {
+  width: min(100% - 2 * var(--gutter), var(--container));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--section-space);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 3rem;
+  padding: var(--space-3) var(--space-6);
+  border: 2px solid transparent;
+  border-radius: var(--radius-pill);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.button-primary {
+  background: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.button-primary:hover {
+  background: var(--color-primary-dark);
+}
+
+.button-secondary {
+  border-color: var(--color-primary);
+  background: transparent;
+  color: var(--color-primary);
+}
+
+.button-secondary:hover {
+  background: var(--color-primary);
+  color: var(--color-surface);
+}
+
+/* Para fundos petróleo: coral com texto escuro (contraste 7,1:1) */
+.button-accent {
+  background: var(--color-accent);
+  color: var(--color-ink);
+}
+
+.button-accent:hover {
+  background: var(--color-accent-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
 }
