@@ -1,8 +1,14 @@
+import DemoBanner from "@/components/DemoBanner";
+import Header from "@/components/Header";
+
 export default function Home() {
   return (
-    <main>
-      <h1>Otto Odontologia</h1>
-      <p>Página em construção.</p>
-    </main>
+    <>
+      <DemoBanner />
+      <Header />
+      <main>
+        <p>Seções em construção.</p>
+      </main>
+    </>
   );
 }
