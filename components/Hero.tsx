@@ -7,11 +7,13 @@ export default function Hero() {
     <section id="inicio" className={styles.hero} aria-labelledby="hero-titulo">
       <div className={`container ${styles.grid}`}>
         <div className={styles.content}>
-          <p className={styles.eyebrow}>Odontologia em Maringá · PR</p>
+          <p className={styles.eyebrow}>Clínica odontológica em Maringá, PR</p>
 
           <h1 id="hero-titulo" className={styles.title}>
-            Cuidado sem pressa.{" "}
-            <span className={styles.titleAccent}>Sorriso em equilíbrio.</span>
+            <span className={styles.line}>Cuidado sem pressa.</span>{" "}
+            <span className={`${styles.line} ${styles.lineEnd}`}>
+              Sorriso em equilíbrio.
+            </span>
           </h1>
 
           <p className={styles.lead}>
@@ -45,6 +47,25 @@ export default function Hero() {
               fetchPriority="high"
               className={styles.image}
             />
+          </div>
+
+          <div className={styles.floatCard}>
+            <span className={styles.floatIcon} aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 6.5h16M4 12h10M4 17.5h7"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </span>
+            <div>
+              <p className={styles.floatLabel}>Primeira consulta</p>
+              <p className={styles.floatText}>
+                Conversa e avaliação antes de qualquer procedimento
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -64,9 +64,6 @@ export default function TestimonialCarousel({ testimonials }: Props) {
         {testimonials.map((testimonial) => (
           <li key={testimonial.author} className={styles.slide}>
             <figure className={styles.card}>
-              <p className={styles.badge}>
-                Depoimento fictício · exemplo de portfólio
-              </p>
               <blockquote className={styles.quote}>
                 <p>{testimonial.quote}</p>
               </blockquote>
@@ -81,7 +78,7 @@ export default function TestimonialCarousel({ testimonials }: Props) {
                 <span>
                   <span className={styles.author}>{testimonial.author}</span>
                   <br />
-                  {testimonial.authorNote} · ilustração
+                  {testimonial.authorNote}
                 </span>
               </figcaption>
             </figure>

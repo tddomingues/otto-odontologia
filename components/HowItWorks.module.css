@@ -1,5 +1,5 @@
 .how {
-  background: var(--color-primary);
+  background: var(--gradient-deep);
   color: var(--color-bg);
 }
 
@@ -23,12 +23,19 @@
   counter-reset: step;
 }
 
+/* Cartões translúcidos sobre o gradiente */
 .step {
   display: grid;
   align-content: start;
   gap: var(--space-2);
-  padding-top: var(--space-6);
-  border-top: 1px solid color-mix(in srgb, var(--color-bg) 30%, transparent);
+  padding: var(--space-6);
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    160deg,
+    rgb(255 255 255 / 0.08),
+    rgb(255 255 255 / 0.02)
+  );
   counter-increment: step;
 }
 
@@ -58,7 +65,7 @@
 @media (min-width: 40rem) {
   .steps {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: var(--space-8);
+    gap: var(--space-4);
   }
 }
 

@@ -28,7 +28,7 @@ export default function Location() {
           <address className={styles.address}>
             Rua dos Ipês Fictícia, 120
             <br />
-            Maringá · PR
+            Maringá, PR
           </address>
           <p className={styles.addressNote}>
             <small>Endereço demonstrativo: a clínica não existe.</small>

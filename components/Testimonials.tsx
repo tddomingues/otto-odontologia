@@ -56,18 +56,13 @@ export default function Testimonials() {
         <div className={styles.header}>
           <h2 id="depoimentos-titulo">O que dizem nossos pacientes</h2>
 
-          <p className={styles.intro}>
-            Cenário conceitual: os depoimentos, as ilustrações e a nota abaixo
-            são fictícios, criados para este projeto de portfólio.
-          </p>
-
           <p className={styles.rating}>
             <strong className={styles.score}>4,9</strong>
             <span className={styles.stars} aria-hidden="true">
               ★★★★★
             </span>
             <span className={styles.ratingLabel}>
-              de 5 · nota média fictícia
+              de 5, nota média fictícia
             </span>
           </p>
         </div>

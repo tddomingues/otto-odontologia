@@ -1,5 +1,5 @@
 .contact {
-  background: var(--color-primary);
+  background: var(--gradient-deep);
   color: var(--color-bg);
 }
 
@@ -35,8 +35,9 @@
   display: grid;
   gap: var(--space-6);
   padding: clamp(var(--space-6), 4vw, var(--space-12));
-  border-radius: var(--radius);
+  border-radius: var(--radius-lg);
   background: var(--color-surface);
+  box-shadow: 0 30px 60px -30px rgb(0 0 0 / 0.45);
   color: var(--color-ink);
 }
 
